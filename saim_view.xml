@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!--Boton principal-->
+		<menuitem id="menu_main_saim" name="SAIM" />
+
+
+		<!--Vista tree de los vehiculos-->
+		<record model="ir.ui.view" id="view_saim_beneficiario_tree">
+			<field name="name">view.saim.beneficiario.tree</field>
+			<field name="model">saim.beneficiario</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Beneficiarios">
+					<field name="numero_identidad"/>
+					<field name="nombres"/>
+					<field name="apellidos"/>
+				</tree>
+			</field>
+		</record>
+
+		<!--Vista form de los vehiculos-->
+		<record model="ir.ui.view" id="view_saim_beneficiario_form">
+			<field name="name">view.saim.beneficiario.form</field>
+			<field name="model">saim.beneficiario</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Beneficiario">
+					<field name="fecha_registro"/>
+					<field name="numero_expediente"/>
+					<field name="nombres"/>
+					<field name="apellidos"/>
+					<field name="tipo_documento"/>
+					<field name="numero_identidad"/>
+					<field name="fecha_nacimiento"/>
+					<field name="nacionalidad"/>
+					<field name="edad"/>
+					<field name="estado_civil"/>
+					<field name="telefono"/>
+					<field name="direccion_habitacion"/>
+					<field name="estado"/>
+					<field name="municipio"/>
+					<field name="parroquia"/>
+					<field name="descripcion_solicitud" colspan="4"/>
+		<notebook colspan="4">
+                        <page string="Familiares">
+				       <field name="familiares_ids" nolabel="1">
+                                                <form string="Grupo Familiar">
+                                                    <field name="nombre"/>
+                                                    <field name="apellido"/>
+                                                    <field name="cedula"/>
+                                                    <field name="edad"/>
+                                                    <field name="genero"/>
+                                                    <field name="parentesco"/>
+                                                    <field name="ocupacion"/>
+                                                    <field name="ingresos"/>
+                                                </form>
+                                                <tree string="Grupo familiar" editable="bottom">
+                                                    <field name="nombre"/>
+                                                    <field name="apellido"/>
+                                                    <field name="cedula"/>
+                                                    <field name="edad"/>
+                                                    <field name="genero"/>
+                                                    <field name="parentesco"/>
+                                                    <field name="ocupacion"/>
+                                                    <field name="ingresos"/>
+                                                </tree>
+
+				       </field>
+                        </page>
+                        <page string="Socio-económica y laboral">
+					<field name="actividad_actual"/>
+					<field name="profesion"/>
+					<field name="lugar_de_trabajo"/>
+					<field name="actividad_comercial"/>
+					<field name="actividad_comercial_detalle"/>
+					<field name="tipo_ingreso"/>
+					<field name="bono_alimentacion"/>
+					<field name="monto_alimentacion"/>
+					<field name="fuente_asignacion_economica"/>
+					<field name="asignacion_economica"/>
+                               </page>
+                        <page string="Educativa">
+					<separator string="Nivel Instrucción" colspan="4"/>
+					<field name="instruccion_basica"/>
+					<field name="instruccion_media"/>
+					<field name="instruccion_universitaria"/>
+                               </page>
+                        <page string="Salud">
+					<field name="discapacidad"/>
+					<field name="discapacidad_detalle"/>
+					<field name="requiere_tratamiento"/>
+					<field name="tratamiento_detalle"/>
+                               </page>
+                    </notebook>
+				</form>
+			</field>
+		</record>
+
+        <!--Acciones-->
+        <record model="ir.actions.act_window" id="action_saim_beneficiario_form">
+            <field name="name">Beneficiario</field>
+            <field name="res_model">saim.beneficiario</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name="context">{}</field>
+            <field name="limit">200</field>
+            <field name="domain">[]</field>
+        </record>
+
+
+	<menuitem name="Beneficiarios" id="menu_main_saim_menu" parent="menu_main_saim" />
+
+        <!--Menus-->
+        <menuitem id="menu_action_saim_beneficiario_form" name="Beneficiarios" parent="menu_main_saim_menu" action="action_saim_beneficiario_form"/>
+
+
+	</data>
+</openerp>
