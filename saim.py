@@ -339,7 +339,7 @@ class saim_familiar(osv.osv):
 			 ("p","Padre"),
 			 ("m","Madre"),
 			 ("h","Hijo"),
-			),"Género"),
+			),"Parentesco"),
        'ocupacion': fields.char("Ocupación",size=128),
        'edad': fields.integer("Edad"),
        'ingresos': fields.float("Ingresos"),
