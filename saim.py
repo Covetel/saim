@@ -88,7 +88,7 @@ class saim_beneficiario(osv.osv):
        'numero_expediente': fields.char("Nro. Expediente",size=128),
        'apellidos': fields.char("Apellidos",size=128),
        'nombres': fields.char("Nombres",size=128),
-       'numero_identidad': fields.char("Numero Doc. Identidad:",size=128),
+       'numero_identidad': fields.char("Número Doc. Identidad:",size=128),
        'tipo_documento': fields.selection((
 			 ("cedulav","Cédula Venezolana"),
 			 ("cedulae","Cédula Extranjero"),
