@@ -97,10 +97,46 @@
 			</field>
 		</record>
 
+		<record model="ir.ui.view" id="view_saim_mision_tree">
+			<field name="name">view.saim.mision.tree</field>
+			<field name="model">saim.mision</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Beneficiarios">
+					<field name="nombre"/>
+					<field name="descripcion"/>
+					<field name="beneficio_economico"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_saim_mision_form">
+			<field name="name">view.saim.mision.form</field>
+			<field name="model">saim.mision</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Mision">
+					<field name="nombre"/>
+					<field name="beneficio_economico" colspan="2"/>
+					<field name="descripcion"/>
+				</form>
+			</field>
+		</record>
+
         <!--Acciones-->
         <record model="ir.actions.act_window" id="action_saim_beneficiario_form">
             <field name="name">Beneficiario</field>
             <field name="res_model">saim.beneficiario</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form,tree</field>
+            <field name="context">{}</field>
+            <field name="limit">200</field>
+            <field name="domain">[]</field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_saim_mision_form">
+            <field name="name">Misiones</field>
+            <field name="res_model">saim.mision</field>
             <field name="view_type">form</field>
             <field name="view_mode">form,tree</field>
             <field name="context">{}</field>
@@ -113,6 +149,11 @@
 
         <!--Menus-->
         <menuitem id="menu_action_saim_beneficiario_form" name="Beneficiarios" parent="menu_main_saim_menu" action="action_saim_beneficiario_form"/>
+
+	<menuitem name="Misiones" id="menu_main_saim_menu_misiones" parent="menu_main_saim" />
+
+        <menuitem id="menu_action_saim_mision_form" name="Misiones" parent="menu_main_saim_menu_misiones" action="action_saim_mision_form"/>
+
 
 
 	</data>
