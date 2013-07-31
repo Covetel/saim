@@ -73,12 +73,12 @@
                             <field name="descripcion_solicitud" colspan="4"/>
                         </page>
                         <page string="Socio-económica y laboral">
-                            <group string="Laboral" colspan="4">
+                            <group string="Laboral" colspan="3">
                                 <field name="actividad_actual" colspan="3"/>
                                 <field name="profesion" colspan="3"/>
                                 <field name="lugar_de_trabajo" colspan="3"/>
                             </group>
-                            <group string="Comercial" colspan="2">
+                            <group string="Comercial" colspan="3">
                                 <field name="actividad_comercial"/>
                                 <field name="actividad_comercial_detalle"/>
                             </group>
@@ -87,7 +87,7 @@
                                 <field name="bono_alimentacion"/>
                                 <field name="monto_alimentacion"/>
                             </group>
-                            <group string="Fuente de asiganción" colspan="3">
+                            <group string="Fuente de asignación" colspan="3">
                                 <field name="fuente_asignacion_economica"/>
                                 <field name="asignacion_economica" colspan="4"/>
                             </group>
