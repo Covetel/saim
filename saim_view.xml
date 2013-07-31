@@ -81,10 +81,11 @@
 					<field name="asignacion_economica"/>
                                </page>
                         <page string="Educativa">
-					<separator string="Nivel Instrucción" colspan="4"/>
-					<field name="instruccion_basica"/>
-					<field name="instruccion_media"/>
-					<field name="instruccion_universitaria"/>
+                    <group col="4" colspan="1" string="Nivel de Instrucción">
+                        <field name="instruccion_basica"/>
+                        <field name="instruccion_media"/>
+                        <field name="instruccion_universitaria"/>
+                    </group>
                                </page>
                         <page string="Salud">
 					<field name="discapacidad"/>
@@ -93,7 +94,7 @@
 					<field name="tratamiento_detalle"/>
                                </page>
                         <page string="Área Habitacional">
-                            <group col="1" colspan="1">
+                            <group col="1" colspan="1" string="Información General">
                                 <field name="tipo_vivienda"/>
                                 <field name="condicion_tenencia"/>
                                 <field name="tipo_pared"/>
@@ -102,8 +103,7 @@
                                 <field name="status_terreno"/>
                                 <field name="doc_propiedad"/>
                             </group>
-                            <group col="2" colspan="1">
-                                <separator string="Área Físico Ambiental" colspan="1"/>
+                            <group col="2" colspan="1" string="Área Físico Ambiental">
                                 <field name="sala"/>
                                 <field name="cocina"/>
                                 <field name="comedor"/>
@@ -113,8 +113,7 @@
                                 <field name="garaje"/>
                                 <field name="o_ambiental"/>
                             </group>
-                            <group col="2" colspan="1">
-                                <separator string="Enseres de la Vivienda" colspan="1"/>
+                            <group col="2" colspan="1" string="Enseres de la vivienda">
                                 <field name="nevera"/>
                                 <field name="cocina"/>
                                 <field name="camas"/>
@@ -137,14 +136,11 @@
 							<field name="aguas_servidas"/>
                         </page>
                         <page string="Participación Socio-Comunitaria">
-                            <group col="1" colspan="1">
-                                <field name="pertenece_organizaciones"/>
-                                <field name="organizacion_pertenece"/>
+                            <group col="1" colspan="1" string="Información General">
                                 <field name="reg_cne"/>
                                 <field name="militante_politico"/>
                             </group>
-                            <group col="3" colspan="3">
-                                <separator string="Organizaciones Populares en la Comunidad" colspan="1"/>
+                            <group col="3" colspan="3" string="Organizaciones Populares en la Comunidad">
                                 <field name="comite_salud"/>
                                 <field name="club_abuelo"/>
                                 <field name="partidos_politicos"/>
@@ -153,6 +149,8 @@
                                 <field name="consejo_comunal"/>
                                 <field name="ctu"/>
                                 <field name="o_organizaciones"/>
+                                <field name="pertenece_organizaciones"/>
+                                <field name="organizacion_pertenece"/>
                             </group>
                         </page>
                         <page string="Diagnóstico del caso">
