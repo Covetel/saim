@@ -36,65 +36,77 @@
 					<field name="nacionalidad"/> 
 					<field name="edad"/>
 					<field name="estado_civil"/>
-					<field name="telefono"/>
-					<field name="direccion_habitacion"/>
-					<field name="estado"/>
-					<field name="municipio"/>
-					<field name="parroquia"/>
-					<field name="descripcion_solicitud" colspan="4"/>
-		<notebook colspan="4">
+                    <separator string="Datos Adicionales" colspan="4"/>
+                    <notebook colspan="4">
                         <page string="Familiares">
-				       <field name="familiares_ids" nolabel="1">
-                                                <form string="Grupo Familiar">
-                                                    <field name="nombre"/>
-                                                    <field name="apellido"/>
-                                                    <field name="cedula"/>
-                                                    <field name="edad"/>
-                                                    <field name="genero"/>
-                                                    <field name="parentesco"/>
-                                                    <field name="ocupacion"/>
-                                                    <field name="ingresos"/>
-                                                </form>
-                                                <tree string="Grupo familiar" editable="bottom">
-                                                    <field name="nombre"/>
-                                                    <field name="apellido"/>
-                                                    <field name="cedula"/>
-                                                    <field name="edad"/>
-                                                    <field name="genero"/>
-                                                    <field name="parentesco"/>
-                                                    <field name="ocupacion"/>
-                                                    <field name="ingresos"/>
-                                                </tree>
-
-				       </field>
+                            <field name="familiares_ids" nolabel="1">
+                                <form string="Grupo Familiar">
+                                    <field name="nombre"/>
+                                    <field name="apellido"/>
+                                    <field name="cedula"/>
+                                    <field name="edad"/>
+                                    <field name="genero"/>
+                                    <field name="parentesco"/>
+                                    <field name="ocupacion"/>
+                                    <field name="ingresos"/>
+                                </form>
+                                <tree string="Grupo familiar" editable="bottom">
+                                    <field name="nombre"/>
+                                    <field name="apellido"/>
+                                    <field name="cedula"/>
+                                    <field name="edad"/>
+                                    <field name="genero"/>
+                                    <field name="parentesco"/>
+                                    <field name="ocupacion"/>
+                                    <field name="ingresos"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Residencia">
+                            <field name="telefono"/>
+                            <field name="direccion_habitacion"/>
+                            <field name="estado"/>
+                            <field name="municipio"/>
+                            <field name="parroquia"/>
+                        </page>
+                        <page string="Solicitud">
+                            <field name="descripcion_solicitud" colspan="4"/>
                         </page>
                         <page string="Socio-económica y laboral">
-					<field name="actividad_actual"/>
-					<field name="profesion"/>
-					<field name="lugar_de_trabajo"/>
-					<field name="actividad_comercial"/>
-					<field name="actividad_comercial_detalle"/>
-					<field name="tipo_ingreso"/>
-					<field name="bono_alimentacion"/>
-					<field name="monto_alimentacion"/>
-					<field name="fuente_asignacion_economica"/>
-					<field name="asignacion_economica"/>
-                               </page>
+                            <group string="Laboral" colspan="4">
+                                <field name="actividad_actual" colspan="3"/>
+                                <field name="profesion" colspan="3"/>
+                                <field name="lugar_de_trabajo" colspan="3"/>
+                            </group>
+                            <group string="Comercial" colspan="2">
+                                <field name="actividad_comercial"/>
+                                <field name="actividad_comercial_detalle"/>
+                            </group>
+                            <group string="Ingresos" colspan="3">
+                                <field name="tipo_ingreso"/>
+                                <field name="bono_alimentacion"/>
+                                <field name="monto_alimentacion"/>
+                            </group>
+                            <group string="Fuente de asiganción" colspan="3">
+                                <field name="fuente_asignacion_economica"/>
+                                <field name="asignacion_economica" colspan="4"/>
+                            </group>
+                        </page>
                         <page string="Educativa">
-                    <group col="4" colspan="1" string="Nivel de Instrucción">
-                        <field name="instruccion_basica"/>
-                        <field name="instruccion_media"/>
-                        <field name="instruccion_universitaria"/>
-                    </group>
-                               </page>
+                            <group col="4" colspan="1" string="Nivel de Instrucción">
+                                <field name="instruccion_basica"/>
+                                <field name="instruccion_media"/>
+                                <field name="instruccion_universitaria"/>
+                            </group>
+                        </page>
                         <page string="Salud">
-					<field name="discapacidad"/>
-					<field name="discapacidad_detalle"/>
-					<field name="requiere_tratamiento"/>
-					<field name="tratamiento_detalle"/>
-                               </page>
-                        <page string="Área Habitacional">
-                            <group col="1" colspan="1" string="Información General">
+                            <field name="discapacidad"/>
+                            <field name="discapacidad_detalle"/>
+                            <field name="requiere_tratamiento"/>
+                            <field name="tratamiento_detalle"/>
+                        </page>
+                        <page string="Habitacional">
+                            <group colspan="3" string="Información General">
                                 <field name="tipo_vivienda"/>
                                 <field name="condicion_tenencia"/>
                                 <field name="tipo_pared"/>
@@ -103,7 +115,7 @@
                                 <field name="status_terreno"/>
                                 <field name="doc_propiedad"/>
                             </group>
-                            <group col="2" colspan="1" string="Área Físico Ambiental">
+                            <group colspan="1" string="Área Físico Ambiental">
                                 <field name="sala"/>
                                 <field name="cocina"/>
                                 <field name="comedor"/>
@@ -113,7 +125,7 @@
                                 <field name="garaje"/>
                                 <field name="o_ambiental"/>
                             </group>
-                            <group col="2" colspan="1" string="Enseres de la vivienda">
+                            <group colspan="1" string="Enseres de la vivienda">
                                 <field name="nevera"/>
                                 <field name="cocina"/>
                                 <field name="camas"/>
@@ -126,38 +138,43 @@
                                 <field name="o_enseres"/>
                             </group>
                         </page>
-                        <page string="Características de los servicios públicos">
-							<field name="basura"/>
-							<field name="electrico"/>
-							<field name="gas"/>
-							<field name="agua_blancas"/>
-							<field name="telefono"/>
-							<field name="transporte"/>
-							<field name="aguas_servidas"/>
+                        <page string="Servicios públicos">
+                            <field name="basura"/>
+                            <field name="electrico"/>
+                            <field name="gas"/>
+                            <field name="agua_blancas"/>
+                            <field name="telefono"/>
+                            <field name="transporte"/>
+                            <field name="aguas_servidas"/>
                         </page>
-                        <page string="Participación Socio-Comunitaria">
-                            <group col="1" colspan="1" string="Información General">
-                                <field name="reg_cne"/>
-                                <field name="militante_politico"/>
+                        <page string="Participación Comunitaria">
+                            <group col="1" colspan="4" string="Información General">
+                                <group colspan="1">
+                                    <field name="reg_cne"/>
+                                    <field name="militante_politico"/>
+                                </group>
                             </group>
-                            <group col="3" colspan="3" string="Organizaciones Populares en la Comunidad">
-                                <field name="comite_salud"/>
-                                <field name="club_abuelo"/>
-                                <field name="partidos_politicos"/>
-                                <field name="casa_alimentacion"/>
-                                <field name="mesa_tecnica_agua"/>
-                                <field name="consejo_comunal"/>
-                                <field name="ctu"/>
-                                <field name="o_organizaciones"/>
-                                <field name="pertenece_organizaciones"/>
-                                <field name="organizacion_pertenece"/>
+                            <group col="2" colspan="1" string="Organizaciones Populares en la Comunidad">
+                                <group colspan="1">
+                                    <field name="comite_salud"/>
+                                    <field name="club_abuelo"/>
+                                    <field name="partidos_politicos"/>
+                                    <field name="casa_alimentacion"/>
+                                    <field name="mesa_tecnica_agua"/>
+                                    <field name="consejo_comunal"/>
+                                    <field name="ctu"/>
+                                    <field name="o_organizaciones"/>
+                                    <separator colspan="4"/>
+                                    <field name="pertenece_organizaciones"/>
+                                    <field name="organizacion_pertenece"/>
+                                </group>
                             </group>
                         </page>
                         <page string="Diagnóstico del caso">
-							<field name="diagnostico_caso"/>
+                            <field name="diagnostico_caso"/>
                         </page>
                         <page string="Recomendaciones">
-							<field name="recomendaciones"/>
+                            <field name="recomendaciones"/>
                         </page>
                     </notebook>
 				</form>

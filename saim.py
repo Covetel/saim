@@ -136,7 +136,7 @@ class saim_beneficiario(osv.osv):
 			 ("j","Tarjeta"),
 			),"Bono Alimentación"),
        'monto_alimentacion': fields.float("Monto del Bono Alimentación"),
-       'asignacion_economica': fields.boolean("Recibe alguna asignación ecnómica por parte del Estado o institución privada."),
+       'asignacion_economica': fields.boolean("Recibe alguna asignación económica."),
        'fuente_asignacion_economica': fields.char("Especifique fuente de la asignación económica.",size=128),
        'instruccion_basica': fields.selection((
 			 ("n","Ninguna"),
