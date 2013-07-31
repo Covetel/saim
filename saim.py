@@ -4,7 +4,7 @@ from osv import osv, fields
 import time
 
 class saim_beneficiario(osv.osv):
-    _name = 'saim.beneficiario' 
+    _name = 'saim.beneficiario'
 
     def _nombre_beneficiario(self,cr,uid,ids,field,arg,context=False):
         seleccionados = self.pool.get('saim.beneficiario').browse(cr,uid,ids,context=context)
@@ -24,24 +24,24 @@ class saim_beneficiario(osv.osv):
        'apellidos': fields.char("Apellidos",size=128),
        'nombres': fields.char("Nombres",size=128),
        'numero_identidad': fields.char("Numero Doc. Identidad:",size=128),
-       'tipo_documento': fields.selection(( 
+       'tipo_documento': fields.selection((
 			 ("cedulav","Cédula Venezolana"),
 			 ("cedulae","Cédula Extranjero"),
 			 ("pasaporte","Pasaporte"),
 			 ("dni","DNI"),
 			 ("otro","Otro")
 			),"Tipo de Documento"),
-       'nacionalidad': fields.selection(( 
+       'nacionalidad': fields.selection((
 			 ("venezolano","Venezolano"),
 			 ("extranjero","Extranjero"),
 			),"Nacionalidad"),
        'edad': fields.integer("Edad"),
-       'estado_civil': fields.selection(( 
+       'estado_civil': fields.selection((
 			 ("soltero","Soltero"),
 			 ("casado","Casado"),
 			 ("otro","Otro"),
 			),"Estado Civil"),
-       'genero': fields.selection(( 
+       'genero': fields.selection((
 			 ("f","Femenino"),
 			 ("m","Masculino"),
 			),"Género"),
@@ -54,12 +54,12 @@ class saim_beneficiario(osv.osv):
        'actividad_actual': fields.char("Actividad Laboral Actual",size=128),
        'profesion': fields.char("Profesión y oficio",size=128),
        'lugar_de_trabajo': fields.char("Lugar de trabajo",size=128),
-       'actividad_comercial': fields.selection(( 
+       'actividad_comercial': fields.selection((
 			 ("s","Si"),
 			 ("n","No"),
 			),"Realiza alguna Actividad Comercial"),
        'actividad_comercial_detalle': fields.char("Cual",size=128),
-       'tipo_ingreso': fields.selection(( 
+       'tipo_ingreso': fields.selection((
 			 ("d","Diario"),
 			 ("s","Semanal"),
 			 ("q","Quincenal"),
@@ -67,41 +67,181 @@ class saim_beneficiario(osv.osv):
 			 ("d","A Destajo"),
 			 ("n","Ninguno"),
 			),"Tipo de Ingreso"),
-       'bono_alimentacion': fields.selection(( 
+       'bono_alimentacion': fields.selection((
 			 ("t","Ticket"),
 			 ("j","Tarjeta"),
 			),"Bono Alimentación"),
        'monto_alimentacion': fields.float("Monto del Bono Alimentación"),
        'asignacion_economica': fields.boolean("Recibe alguna asignación ecnómica por parte del Estado o institución privada."),
        'fuente_asignacion_economica': fields.char("Especifique fuente de la asignación económica.",size=128),
-       ## todo: GRUPO FAMILIAR
-       'instruccion_basica': fields.selection(( 
+       'instruccion_basica': fields.selection((
 			 ("n","Ninguna"),
 			 ("i","Incompleta"),
 			 ("c","Completa"),
-			),"Básica"),      
-       'instruccion_media': fields.selection(( 
+			),"Básica"),
+       'instruccion_media': fields.selection((
 			 ("n","Ninguna"),
 			 ("i","Incompleta"),
 			 ("c","Completa"),
-			),"Media"),      
-       'instruccion_universitaria': fields.selection(( 
+			),"Media"),
+       'instruccion_universitaria': fields.selection((
 			 ("n","Ninguna"),
 			 ("i","Incompleta"),
 			 ("c","Completa"),
-			),"Universitarios"),      
-       'discapacidad': fields.selection(( 
+			),"Universitarios"),
+       'discapacidad': fields.selection((
 			 ("s","Si"),
 			 ("n","No"),
-			),"Presenta o Padece alguna Enfermedad o discapacidad."),      
-       'discapacidad_detalle': fields.char("Especifique",size=128),      
-       'requiere_tratamiento': fields.selection(( 
+			),"Presenta o Padece alguna Enfermedad o discapacidad."),
+       'discapacidad_detalle': fields.char("Especifique",size=128),
+       'requiere_tratamiento': fields.selection((
 			 ("s","Si"),
 			 ("n","No"),
-			),"Requiere de tratamiento permanente"),      
+			),"Requiere de tratamiento permanente"),
        'tratamiento_detalle': fields.char("Especifique",size=128),
-	#todo: Falta area habitacional, 
-       'familiares_ids': fields.one2many('saim.familiar','beneficiario_id',"Grupo Familiar",required=True)
+       'familiares_ids': fields.one2many('saim.familiar','beneficiario_id',"Grupo Familiar",required=True),
+       #area habitacional
+       'tipo_vivienda': fields.selection((
+			 ("c","Casa"),
+			 ("a","Apartamento"),
+			 ("r","Rancho"),
+			 ("h","Habitación"),
+			 ("s","Situación de Calle"),
+			 ("o","Otro"),
+			),"Tipo de vivienda"),
+       'condicion_tenencia': fields.selection((
+			 ("p","Propia"),
+			 ("a","Alquilada"),
+			 ("c","Compartida"),
+			 ("pr","Prestada"),
+			 ("i","Invadida"),
+			 ("o","Otro"),
+			),"Condiciones de tenencia"),
+       'tipo_pared': fields.selection((
+			 ("f","Frisada"),
+			 ("z","Zinc"),
+			 ("m","Madera"),
+			 ("o","Otro"),
+			),"Tipo de pared"),
+       'tipo_piso': fields.selection((
+			 ("t","Tierra"),
+			 ("c","Cemento"),
+			 ("ca","Ceramica"),
+			 ("o","Otro"),
+			),"Tipo de piso"),
+       'tipo_techo': fields.selection((
+			 ("p","Platabanda"),
+			 ("a","Asbesto"),
+			 ("ac","Acerolit"),
+			 ("z","Zinc"),
+			 ("o","Otro"),
+			),"Tipo de techo"),
+        #Área físico ambiental
+       'sala': fields.boolean("Sala"),
+       'cocina': fields.boolean("Cocina"),
+       'comedor': fields.boolean("Comedor"),
+       'sala_comedor': fields.boolean("Sala-Comedor"),
+       'habitacion': fields.boolean("Habitación"),
+       'bano': fields.boolean("Baño"),
+       'garaje': fields.boolean("Garaje"),
+       'o_ambiental': fields.boolean("Otro"),
+        #Enseres en la vivienda
+       'nevera': fields.boolean("Nevera"),
+       'cocina': fields.boolean("Cocina"),
+       'camas': fields.boolean("Camas"),
+       'tv': fields.boolean("TV"),
+       'tv_cable': fields.boolean("TV por cable"),
+       'muebles': fields.boolean("Muebles"),
+       'compu': fields.boolean("Computadora"),
+       'aire': fields.boolean("Aire acondicionado"),
+       'radio': fields.boolean("Radio"),
+       'o_enseres': fields.boolean("Otro"),
+       'status_terreno': fields.selection((
+			 ("p","Propio"),
+			 ("i","Invadido"),
+			 ("pri","Privado"),
+			 ("pre","Prestado"),
+			 ("o","Otro"),
+			),"Estatus del terreno"),
+       'doc_propiedad': fields.selection((
+			 ("su","Título supletorio"),
+			 ("pro","Título de propiedad"),
+			 ("n","No tiene"),
+			 ("o","Otro"),
+			),"Documento de propiedad"),
+       #características servicios públicos
+       'basura': fields.selection((
+			 ("c","Container"),
+			 ("au","Aseo urbano"),
+			 ("al","Aire libre"),
+			 ("q","Quemada"),
+			 ("o","Otro"),
+			),"Recolección de basura"),
+       'electrico': fields.selection((
+			 ("e","Electricidad"),
+			 ("pe","Planta eléctrica"),
+			 ("a","Alambrado público"),
+			 ("ss","Sin servicio"),
+			 ("o","Otro"),
+			),"Servicio electrico"),
+       'gas': fields.selection((
+			 ("d","Gas directo"),
+			 ("b","Bombona"),
+			 ("l","Leña"),
+			 ("o","Otro"),
+			),"Gas domestico"),
+       'agua_blancas': fields.selection((
+			 ("t","Tuberías"),
+			 ("ll","Lluvia"),
+			 ("r","Rio"),
+			 ("c","Cisterna"),
+			 ("o","Otro"),
+			),"Aguas blancas"),
+       'telefono': fields.selection((
+			 ("c","Celular"),
+			 ("d","Domiciliaria"),
+			 ("i","Internet"),
+			 ("s","Sin servicio"),
+			),"Teléfono"),
+       'transporte': fields.selection((
+			 ("pro","Propio"),
+			 ("pri","Privado"),
+			 ("pu","Público"),
+			 ("o","Otro"),
+			),"Transporte"),
+       'aguas_servidas': fields.selection((
+			 ("c","Cloaca"),
+			 ("al","Aire Libre"),
+			 ("l","Letrina"),
+			 ("p","Pozo Séptico"),
+			 ("o","Otro"),
+			),"Aguas servidas"),
+       #Participación socio-comunitaria
+        #Organizaciones poulares dentro de la comunidad
+       'comite_salud': fields.boolean("Comité de salud"),
+       'club_abuelo': fields.boolean("Club de abuelo"),
+       'partidos_politicos': fields.boolean("Partidos políticos"),
+       'casa_alimentacion': fields.boolean("Casa de alimentación"),
+       'mesa_tecnica_agua': fields.boolean("Mesa técnica de agua"),
+       'consejo_comunal': fields.boolean("Consejos comunales"),
+       'ctu': fields.boolean("CTU"),
+       'o_organizaciones': fields.char("Otros",size=128),
+       'pertenece_organizaciones': fields.selection((
+            ("s","Si"),
+            ("n","No"),
+           ),"Pertenece a alguna de estas organizaciones"),
+       'organizacion_pertenece': fields.char("A cual organización pertenece",size=128),
+       'misiones_ids': fields.one2many('saim.misiones','beneficiario_id',"Misiones en la comunidad",required=True),
+       'reg_cne': fields.selection((
+            ("s","Si"),
+            ("n","No"),
+           ),"Se encuentra registrado en el CNE"),
+       'militante_politico': fields.selection((
+            ("s","Si"),
+            ("n","No"),
+           ),"Es militante de alguna organización política"),
+       'diagnostico_caso': fields.text("Diagnóstico del caso",size=128),
+       'recomendaciones': fields.text("Recomendaciones",size=128),
     }
 
     _defaults = {
@@ -121,8 +261,6 @@ class saim_familiar(osv.osv):
             result[each.id] = str(each.nombre)+" "+str(each.apellido)+" ("+str(each.cedula)+")"
         return result
 
-
-
     _columns = {
        'name': fields.function(_nombre_familiar,
                             method=True,type='str', string="Nombre del objeto"),
@@ -130,11 +268,11 @@ class saim_familiar(osv.osv):
        'apellido': fields.char("Apellido",size=128),
        'cedula': fields.char("Cedula Identidad",size=128),
        'edad': fields.char("Edad",size=128),
-       'genero': fields.selection(( 
+       'genero': fields.selection((
 			 ("f","Femenino"),
 			 ("m","Masculino"),
 			),"Género"),
-       'parentesco': fields.selection(( 
+       'parentesco': fields.selection((
 			 ("p","Padre"),
 			 ("m","Madre"),
 			 ("h","Hijo"),
@@ -158,6 +296,7 @@ class saim_mision(osv.osv):
 			 ("s","Si"),
 			 ("n","No"),
 			),"Brinda beneficio económico"),
+       'beneficiario_id': fields.many2one('saim.beneficiario',"Beneficiario",required=True)
     }
 
 saim_mision()
@@ -202,7 +341,7 @@ class vehiculos_vehiculo(osv.osv):
             }
 
     _default = {
-            'company_id': lambda s,cr,uid,c: s.pool.get('res.company')._company_default_get(cr, uid, 'vehiculos.vehiculo', context=c), 
+            'company_id': lambda s,cr,uid,c: s.pool.get('res.company')._company_default_get(cr, uid, 'vehiculos.vehiculo', context=c),
             }
 
 vehiculos_vehiculo()
