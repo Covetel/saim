@@ -92,6 +92,62 @@
 					<field name="requiere_tratamiento"/>
 					<field name="tratamiento_detalle"/>
                                </page>
+                        <page string="Área Habitacional">
+                            <field name="tipo_vivienda"/>
+                            <field name="condicion_tenencia"/>
+                            <field name="tipo_pared"/>
+                            <field name="tipo_piso"/>
+                            <field name="tipo_techo"/>
+                            <field name="sala"/>
+                            <field name="cocina"/>
+                            <field name="comedor"/>
+                            <field name="sala_comedor"/>
+                            <field name="habitacion"/>
+                            <field name="bano"/>
+                            <field name="garaje"/>
+                            <field name="o_ambiental"/>
+                            <field name="nevera"/>
+                            <field name="cocina"/>
+                            <field name="camas"/>
+                            <field name="tv"/>
+                            <field name="tv_cable"/>
+                            <field name="muebles"/>
+                            <field name="compu"/>
+                            <field name="aire"/>
+                            <field name="radio"/>
+                            <field name="o_enseres"/>
+                            <field name="status_terreno"/>
+                            <field name="doc_propiedad"/>
+                        </page>
+                        <page string="Características de los servicios públicos">
+							<field name="basura"/>
+							<field name="electrico"/>
+							<field name="gas"/>
+							<field name="agua_blancas"/>
+							<field name="telefono"/>
+							<field name="transporte"/>
+							<field name="aguas_servidas"/>
+                        </page>
+                        <page string="Participación Socio-Comunitaria">
+							<field name="comite_salud"/>
+							<field name="club_abuelo"/>
+							<field name="partidos_politicos"/>
+							<field name="casa_alimentacion"/>
+							<field name="mesa_tecnica_agua"/>
+							<field name="consejo_comunal"/>
+							<field name="ctu"/>
+							<field name="o_organizaciones"/>
+							<field name="pertenece_organizaciones"/>
+							<field name="organizacion_pertenece"/>
+							<field name="reg_cne"/>
+							<field name="militante_politico"/>
+                        </page>
+                        <page string="Diagnóstico del caso">
+							<field name="diagnostico_caso"/>
+                        </page>
+                        <page string="Recomendaciones">
+							<field name="recomendaciones"/>
+                        </page>
                     </notebook>
 				</form>
 			</field>
