@@ -31,9 +31,9 @@
 					<field name="nombres"/>
 					<field name="apellidos"/>
 					<field name="tipo_documento"/>
-					<field name="numero_identidad"/>
+					<field name="numero_identidad" on_change="check_id(numero_identidad)"/>
 					<field name="fecha_nacimiento"/>
-					<field name="nacionalidad"/>
+					<field name="nacionalidad"/> 
 					<field name="edad"/>
 					<field name="estado_civil"/>
 					<field name="telefono"/>

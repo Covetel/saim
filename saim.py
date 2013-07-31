@@ -1,6 +1,8 @@
 #!/usr/local/bin/python
 # -*- coding: utf-8 -*-
 from osv import osv, fields
+from datetime import datetime
+import math
 import time
 
 class saim_beneficiario(osv.osv):
@@ -13,13 +15,76 @@ class saim_beneficiario(osv.osv):
             result[each.id] = str(each.nombres)+" "+str(each.apellidos)+" ("+str(each.numero_identidad)+")"
         return result
 
+    def validar_cedula(self,numero_identidad):
+	if numero_identidad.upper().find("V") < 0 and numero_identidad.upper().find("E") < 0:
+            numero_identidad="V"+numero_identidad 
+	if numero_identidad.find("-") < 0:
+            numero_identidad=numero_identidad[0]+"-"+numero_identidad[1:] 
+        return numero_identidad.upper()
+
+    def check_id(self, cr, uid, ids, identity, context=None):
+        respuesta = {}
+        print "Revisando con check_id ",identity
+        identity = self.validar_cedula(identity)
+        if str.upper(identity)[0] == "V":
+            print "venezolano"
+            respuesta.update({"value":{"nacionalidad":"venezolano","numero_identidad":identity}})
+            if len(identity)>10:
+                respuesta.update({"warning":{"title":"Longitud inapropiada","message":"El numero de identidad no debe tener mas de 10 caracteres."}})
+                print "muy largo!"
+            return respuesta 
+        if str.upper(identity)[0] == "E":
+            print "extranjero"
+            respuesta.update({"value":{"nacionalidad":"extranjero","numero_identidad":identity}})
+            return respuesta
+        print "ninguno" 
+
+    def check_nacionalidad(self, cr, uid, ids, nacionalidad, numero_identidad, context=None):
+        if cmp(nacionalidad,"venezolano"):
+            return {"value":{"nacionalidad":"venezolano","numero_identidad":"V"+numero_identidad[1:]}}
+        if cmp(nacionalidad,"extranjero"):
+            return {"value":{"nacionalidad":"extranjero","numero_identidad":"E"+numero_identidad[1:]}}
+        
+
+    def _calcular_edad(self,cr,uid,ids,field,arg,context=False):
+        seleccionados = self.pool.get('saim.beneficiario').browse(cr,uid,ids,context=context)
+        result = {}
+        for each in seleccionados:
+            try:
+                result[each.id] = math.floor((datetime.now() - datetime.strptime(each.fecha_nacimiento,"%Y-%m-%d")).days/365)
+            except:
+                result[each.id] = 0
+        return result
+
+
+    def _check_identidad(self, cr, uid, ids, context=None):
+        record = self.browse(cr, uid, ids, context=context)
+        for data in record:
+            if data.numero_identidad.find("V-")!=0 and data.numero_identidad.find("E-")!=0 :
+                return False
+        return True
+
+    def _check_identidad2(self, cr, uid, ids, context=None):
+        record = self.browse(cr, uid, ids, context=context)
+        for data in record:
+            if any(c.isalpha() for c in data.numero_identidad[2:]):
+                return False
+        return True
+
+
+
+
+    _constraints = [(_check_identidad, 'El Doc. Identidad debe empezar por "V-" o "E-"', ['numero_identidad']),
+                    (_check_identidad2, 'El Doc. Identidad no puede contener letras.', ['numero_identidad'])]
 
 
     _columns = {
        'name': fields.function(_nombre_beneficiario,
                             method=True,type='str', string="Nombre del objeto"),
-       'fecha_registro': fields.date("Fecha de Registro"),
+       'fecha_registro': fields.date("Fecha de Registro",readonly=True),
        'fecha_nacimiento': fields.date("Fecha de Nacimiento"),
+       'edad': fields.function(_calcular_edad,
+			    method=True,type='integer', string="Edad"),
        'numero_expediente': fields.char("Nro. Expediente",size=128),
        'apellidos': fields.char("Apellidos",size=128),
        'nombres': fields.char("Nombres",size=128),
@@ -35,7 +100,6 @@ class saim_beneficiario(osv.osv):
 			 ("venezolano","Venezolano"),
 			 ("extranjero","Extranjero"),
 			),"Nacionalidad"),
-       'edad': fields.integer("Edad"),
        'estado_civil': fields.selection((
 			 ("soltero","Soltero"),
 			 ("casado","Casado"),
@@ -267,7 +331,6 @@ class saim_familiar(osv.osv):
        'nombre': fields.char("Nombre",size=128),
        'apellido': fields.char("Apellido",size=128),
        'cedula': fields.char("Cedula Identidad",size=128),
-       'edad': fields.char("Edad",size=128),
        'genero': fields.selection((
 			 ("f","Femenino"),
 			 ("m","Masculino"),
