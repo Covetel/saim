@@ -147,6 +147,21 @@ class saim_familiar(osv.osv):
 
 saim_familiar()
 
+class saim_mision(osv.osv):
+    _name = 'saim.mision'
+
+    _columns = {
+       'nombre': fields.char("Nombre",size=128),
+       'descripcion': fields.text("Descripción",size=256),
+       'edad': fields.char("Edad",size=128),
+       'beneficio_economico': fields.selection((
+			 ("s","Si"),
+			 ("n","No"),
+			),"Brinda beneficio económico"),
+    }
+
+saim_mision()
+
 """
 class vehiculos_vehiculo(osv.osv):
     _name = 'vehiculos.vehiculo'
