@@ -4,6 +4,7 @@ from osv import osv, fields
 from datetime import datetime
 import math
 import time
+from geo import geo
 
 class saim_beneficiario(osv.osv):
     _name = 'saim.beneficiario'
@@ -46,6 +47,10 @@ class saim_beneficiario(osv.osv):
             return {"value":{"nacionalidad":"extranjero","numero_identidad":"E"+numero_identidad[1:]}}
         
 
+    def pa_municipio(self, cr, uid, ids, estado, context=None):
+        print "en pa_municipio:", estado
+        return {"domain":{"municipio":[("padre","=","29")]}}
+
     def _calcular_edad(self,cr,uid,ids,field,arg,context=False):
         seleccionados = self.pool.get('saim.beneficiario').browse(cr,uid,ids,context=context)
         result = {}
@@ -72,6 +77,9 @@ class saim_beneficiario(osv.osv):
         return True
 
 
+    def _func_municipio(self,cr,uid,context):
+        print context
+	return [(a,a) for a in geo["República Bolivariana de Venezuela"] ]
 
 
     _constraints = [(_check_identidad, 'El Doc. Identidad debe empezar por "V-" o "E-"', ['numero_identidad']),
@@ -112,9 +120,9 @@ class saim_beneficiario(osv.osv):
        'telefono': fields.char("Teléfono",size=128),
        'descripcion_solicitud': fields.text("Descripción solicitud",size=128),
        'direccion_habitacion': fields.char("Dirección Habitación",size=256),
-       'estado': fields.char("Estado",size=128),
-       'municipio': fields.char("Municipio",size=128),
-       'parroquia': fields.char("Parroquia",size=128),
+       'estado': fields.many2one('saim.estados',"Estado",required=True),
+       'municipio': fields.many2one('saim.municipios',"Municipio",required=True),
+       'parroquia': fields.many2one('saim.parroquias',"Parroquia",required=True),
        'actividad_actual': fields.char("Actividad Laboral Actual",size=128),
        'profesion': fields.char("Profesión y oficio",size=128),
        'lugar_de_trabajo': fields.char("Lugar de trabajo",size=128),
@@ -310,6 +318,7 @@ class saim_beneficiario(osv.osv):
 
     _defaults = {
         "fecha_registro": lambda *a: time.strftime('%Y-%m-%d'),
+        "tipo_documento": "cedulav"
     }
 
 saim_beneficiario()
@@ -363,6 +372,31 @@ class saim_mision(osv.osv):
     }
 
 saim_mision()
+
+class saim_estados(osv.osv):
+    _name = 'saim.estados'
+    _columns = {
+       'name': fields.char("Nombre",size=128),
+    }
+saim_estados()
+
+class saim_municipios(osv.osv):
+    _name = 'saim.municipios'
+    _columns = {
+       'name': fields.char("Nombre",size=128),
+       'padre': fields.many2one('saim.estados',"Estado")
+    }
+saim_municipios()
+
+class saim_parroquias(osv.osv):
+    _name = 'saim.parroquias'
+    _columns = {
+       'name': fields.char("Nombre",size=128),
+       'padre': fields.many2one('saim.municipios',"Municipio")
+    }
+saim_parroquias()
+
+
 
 """
 class vehiculos_vehiculo(osv.osv):
