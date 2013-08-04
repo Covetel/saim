@@ -65,7 +65,8 @@
                         <page string="Residencia">
                             <field name="telefono"/>
                             <field name="direccion_habitacion"/>
-                            <field name="estado" />
+                            <field name="pais" />
+                            <field name="estado"  domain="[('padre' , '=', context.get('pais' , False))]"/>
                             <field name="municipio" domain="[('padre' , '=', context.get('estado' , False))]"/>
                             <field name="parroquia" domain="[('padre' , '=', context.get('municipio' , False))]"/>
                         </page>
@@ -104,6 +105,7 @@
                             <field name="discapacidad_detalle"/>
                             <field name="requiere_tratamiento"/>
                             <field name="tratamiento_detalle"/>
+                            <field name="sexo"/>
                         </page>
                         <page string="Habitacional">
                             <group colspan="3" string="Información General">

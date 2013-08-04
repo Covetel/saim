@@ -96,7 +96,7 @@ class saim_beneficiario(osv.osv):
        'numero_expediente': fields.char("Nro. Expediente",size=128),
        'apellidos': fields.char("Apellidos",size=128),
        'nombres': fields.char("Nombres",size=128),
-       'numero_identidad': fields.char("Número Doc. Identidad:",size=128),
+       'numero_identidad': fields.char("Número Doc. Identidad:",size=128, required=True),
        'tipo_documento': fields.selection((
 			 ("cedulav","Cédula Venezolana"),
 			 ("cedulae","Cédula Extranjero"),
@@ -120,9 +120,10 @@ class saim_beneficiario(osv.osv):
        'telefono': fields.char("Teléfono",size=128),
        'descripcion_solicitud': fields.text("Descripción solicitud",size=128),
        'direccion_habitacion': fields.char("Dirección Habitación",size=256),
-       'estado': fields.many2one('saim.estados',"Estado",required=True),
-       'municipio': fields.many2one('saim.municipios',"Municipio",required=True),
-       'parroquia': fields.many2one('saim.parroquias',"Parroquia",required=True),
+       'estado': fields.many2one('saim.estados',"Estado"),
+       'pais': fields.many2one('saim.pais',"Pais"),
+       'municipio': fields.many2one('saim.municipios',"Municipio"),
+       'parroquia': fields.many2one('saim.parroquias',"Parroquia"),
        'actividad_actual': fields.char("Actividad Laboral Actual",size=128),
        'profesion': fields.char("Profesión y oficio",size=128),
        'lugar_de_trabajo': fields.char("Lugar de trabajo",size=128),
@@ -302,6 +303,10 @@ class saim_beneficiario(osv.osv):
             ("s","Si"),
             ("n","No"),
            ),"Pertenece a alguna de estas organizaciones"),
+       'sexo': fields.selection((
+            ("f","Femenino"),
+            ("m","Masculino"),
+           ),"Sexo"),
        'organizacion_pertenece': fields.char("A cual organización pertenece",size=128),
        'misiones_ids': fields.one2many('saim.misiones','beneficiario_id',"Misiones en la comunidad",required=True),
        'reg_cne': fields.selection((
@@ -318,6 +323,7 @@ class saim_beneficiario(osv.osv):
 
     _defaults = {
         "fecha_registro": lambda *a: time.strftime('%Y-%m-%d'),
+        "pais":184, #Venezuela por Defecto
         "tipo_documento": "cedulav"
     }
 
@@ -373,10 +379,18 @@ class saim_mision(osv.osv):
 
 saim_mision()
 
+class saim_pais(osv.osv):
+    _name = 'saim.pais'
+    _columns = {
+       'name': fields.char("Nombre",size=128),
+    }
+saim_pais()
+
 class saim_estados(osv.osv):
     _name = 'saim.estados'
     _columns = {
        'name': fields.char("Nombre",size=128),
+       'padre': fields.many2one('saim.pais',"País")
     }
 saim_estados()
 
