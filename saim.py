@@ -88,7 +88,7 @@ class saim_beneficiario(osv.osv):
 
     _columns = {
        'name': fields.function(_nombre_beneficiario,
-                            method=True,type='str', string="Nombre del objeto"),
+                            method=True, string="Nombre del objeto"),
        'fecha_registro': fields.date("Fecha de Registro",readonly=True),
        'fecha_nacimiento': fields.date("Fecha de Nacimiento"),
        'edad': fields.function(_calcular_edad,
@@ -342,7 +342,7 @@ class saim_familiar(osv.osv):
 
     _columns = {
        'name': fields.function(_nombre_familiar,
-                            method=True,type='str', string="Nombre del objeto"),
+                            method=True, string="Nombre del objeto"),
        'nombre': fields.char("Nombre",size=128),
        'apellido': fields.char("Apellido",size=128),
        'cedula': fields.char("Cedula Identidad",size=128),
