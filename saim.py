@@ -369,12 +369,11 @@ class saim_mision(osv.osv):
     _columns = {
        'nombre': fields.char("Nombre",size=128),
        'descripcion': fields.text("Descripción",size=256),
-       'edad': fields.char("Edad",size=128),
        'beneficio_economico': fields.selection((
 			 ("s","Si"),
 			 ("n","No"),
 			),"Brinda beneficio económico"),
-       'beneficiario_id': fields.many2one('saim.beneficiario',"Beneficiario",required=True)
+       'beneficiario_id': fields.many2one('saim.beneficiario',"Beneficiario")
     }
 
 saim_mision()
