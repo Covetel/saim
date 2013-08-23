@@ -3,7 +3,7 @@ import xmlrpclib
 
 username = 'admin' #the user
 pwd = '123'      #the password of the user
-dbname = 'Covetel'    #the database
+dbname = 'Covetel7'    #the database
 
 # Get the uid
 sock_common = xmlrpclib.ServerProxy ('http://localhost:8069/xmlrpc/common')

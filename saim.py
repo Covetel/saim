@@ -8,13 +8,24 @@ from geo import geo
 
 class saim_beneficiario(osv.osv):
     _name = 'saim.beneficiario'
+    _description = "Beneficiarios"
 
     def _nombre_beneficiario(self,cr,uid,ids,field,arg,context=False):
         seleccionados = self.pool.get('saim.beneficiario').browse(cr,uid,ids,context=context)
         result = {}
         for each in seleccionados:
-            result[each.id] = str(each.nombres)+" "+str(each.apellidos)+" ("+str(each.numero_identidad)+")"
+            result[each.id] = "Hola" 
+            #result[each.id] = str(each.nombres)+" "+str(each.apellidos)+" ("+str(each.numero_identidad)+")"
         return result
+
+    def _model_name_get_fnc(self, cr, uid, ids, field_name, arg, context=None):
+        res = {}
+        for record in self.browse(cr, uid, ids, context=context):
+            if record.nombres:
+                name = str(record.nombres)+" "+str(record.apellidos) 
+            res[record.id] = name
+        return res
+
 
     def validar_cedula(self,numero_identidad):
 	if numero_identidad.upper().find("V") < 0 and numero_identidad.upper().find("E") < 0:
@@ -87,8 +98,11 @@ class saim_beneficiario(osv.osv):
 
 
     _columns = {
-       'name': fields.function(_nombre_beneficiario,
-                            method=True,type='str', string="Nombre del objeto"),
+       #'name': fields.function(_nombre_beneficiario,
+       #                     method=True,type='str', string="Nombre del objeto"),
+
+       'name': fields.function(_model_name_get_fnc, type="char", string='Name'),
+       #'name': fields.char("Name",size=128),
        'fecha_registro': fields.date("Fecha de Registro",readonly=True),
        'fecha_nacimiento': fields.date("Fecha de Nacimiento"),
        'edad': fields.function(_calcular_edad,
@@ -331,6 +345,7 @@ saim_beneficiario()
 
 class saim_familiar(osv.osv):
     _name = "saim.familiar"
+    _description = "Familia"
 
 
     def _nombre_familiar(self,cr,uid,ids,field,arg,context=False):
@@ -365,6 +380,7 @@ saim_familiar()
 
 class saim_mision(osv.osv):
     _name = 'saim.mision'
+    _description = "Mision"
 
     _columns = {
        'nombre': fields.char("Nombre",size=128),
