@@ -3,8 +3,10 @@ import xmlrpclib
 from geo import geo
 
 username = 'admin' #the user
-pwd = '123'      #the password of the user
-dbname = 'Covetel7'    #the database
+#pwd = '123'      #the password of the user
+#dbname = 'Covetel7'    #the database
+pwd = '123321...'      #the password of the user
+dbname = 'SAIM'    #the database
 
 # Get the uid
 sock_common = xmlrpclib.ServerProxy ('http://localhost:8069/xmlrpc/common')
