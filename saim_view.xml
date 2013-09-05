@@ -100,13 +100,6 @@
                                 <field name="instruccion_universitaria"/>
                             </group>
                         </page>
-                        <page string="Salud">
-                            <field name="discapacidad"/>
-                            <field name="discapacidad_detalle"/>
-                            <field name="requiere_tratamiento"/>
-                            <field name="tratamiento_detalle"/>
-                            <field name="sexo"/>
-                        </page>
                         <page string="Habitacional">
                             <group colspan="3" string="Información General">
                                 <field name="tipo_vivienda"/>
@@ -149,7 +142,14 @@
                             <field name="transporte"/>
                             <field name="aguas_servidas"/>
                         </page>
-                        <page string="Participación Comunitaria">
+                        <page string="Salud">
+                            <field name="discapacidad"/>
+                            <field name="discapacidad_detalle"/>
+                            <field name="requiere_tratamiento"/>
+                            <field name="tratamiento_detalle"/>
+                            <field name="sexo"/>
+                        </page>
+                       <page string="Participación Comunitaria">
                             <group col="1" colspan="4" string="Información General">
                                 <group colspan="1">
                                     <field name="reg_cne"/>

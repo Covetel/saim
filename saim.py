@@ -21,8 +21,14 @@ class saim_beneficiario(osv.osv):
     def _model_name_get_fnc(self, cr, uid, ids, field_name, arg, context=None):
         res = {}
         for record in self.browse(cr, uid, ids, context=context):
+            name = ""
             if record.nombres:
-                name = str(record.nombres)+" "+str(record.apellidos) 
+                name+= str(record.nombres)
+            if record.apellidos:
+                name+= " "+str(record.apellidos)
+            if len(name)>0:
+                name+=", "
+            name += record.numero_identidad
             res[record.id] = name
         return res
 
