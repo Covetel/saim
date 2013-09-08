@@ -36,6 +36,7 @@
 					<field name="nacionalidad"/> 
 					<field name="edad"/>
 					<field name="estado_civil"/>
+					<field name="mision_id"/>
                     <separator string="Datos Adicionales" colspan="4"/>
                     <notebook colspan="4">
                         <page string="Familiares">
@@ -189,7 +190,7 @@
 			<field name="type">tree</field>
 			<field name="arch" type="xml">
 				<tree string="Beneficiarios">
-					<field name="nombre"/>
+					<field name="name"/>
 					<field name="descripcion"/>
 					<field name="beneficio_economico"/>
 				</tree>
@@ -202,7 +203,7 @@
 			<field name="type">form</field>
 			<field name="arch" type="xml">
 				<form string="Mision">
-					<field name="nombre"/>
+					<field name="name"/>
 					<field name="beneficio_economico" colspan="2"/>
 					<field name="descripcion"/>
 				</form>

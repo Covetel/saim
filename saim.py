@@ -139,7 +139,6 @@ class saim_beneficiario(osv.osv):
 			 ("f","Femenino"),
 			 ("m","Masculino"),
 			),"Género"),
-       'telefono': fields.char("Teléfono",size=128),
        'descripcion_solicitud': fields.text("Descripción solicitud",size=128),
        'direccion_habitacion': fields.char("Dirección Habitación",size=256),
        'estado': fields.many2one('saim.estados',"Estado"),
@@ -330,7 +329,9 @@ class saim_beneficiario(osv.osv):
             ("m","Masculino"),
            ),"Sexo"),
        'organizacion_pertenece': fields.char("A cual organización pertenece",size=128),
-       'misiones_ids': fields.one2many('saim.misiones','beneficiario_id',"Misiones en la comunidad",required=True),
+       #'misiones_ids': fields.one2many('aim.misiones','beneficiario_id',"Misiones en la comunidad",required=True),
+       #'misiones_ids': fields.one2many('aim.misiones','beneficiario_id',"Misiones en la comunidad",required=True),
+       'mision_id': fields.many2one('saim.mision',"Mision las que pertenece"),
        'reg_cne': fields.selection((
             ("s","Si"),
             ("n","No"),
@@ -341,6 +342,46 @@ class saim_beneficiario(osv.osv):
            ),"Es militante de alguna organización política"),
        'diagnostico_caso': fields.text("Diagnóstico del caso",size=128),
        'recomendaciones': fields.text("Recomendaciones",size=128),
+       'numero_telefono': fields.char("Teléfono",size=128), #TODO: agregar estos dos campos a la interfaz
+       'numero_celular': fields.char("Celular",size=128),
+       # TODO: Data sin visibilidad en la interfaz gráfica
+       'indigena': fields.selection((
+            ("s","Si"),
+            ("n","No"),
+           ),"Indígena"),
+       'tipo_discapacidad': fields.text("Tipo Discapacidad",size=128),
+       'primaria': fields.selection((
+           ('0','Incompleta'),
+           ('1','Completa'),
+           ),"Primaria"),
+       'secundaria': fields.selection((
+           ('0','Incompleta'),
+           ('1','Completa'),
+           ),"Secundaria"),
+       'universitario': fields.selection((
+           ('0','Incompleta'),
+           ('1','Completa'),
+           ),"Universitario"),
+       'habilidades': fields.text("Habilidades",size=256),
+       'duracion_trabajo': fields.selection((
+           ('0','Fijo'),
+           ('1','Temporal'),
+           ),"Duración de Trabajo"),
+       'fuente_trabajo': fields.selection((
+           ('0','Privado'),
+           ('1','Público'),
+           ),"Fuente de Trabajo"),
+       'negocio_propio': fields.selection((
+           ('0','No'),
+           ('1','Si'),
+           ),"Negocio Propio"),
+       'ingresos': fields.float("Ingresos"),
+
+
+
+
+
+
     }
 
     _defaults = {
@@ -391,13 +432,14 @@ class saim_mision(osv.osv):
     _description = "Mision"
 
     _columns = {
-       'nombre': fields.char("Nombre",size=128),
+       'name': fields.char("Nombre",size=128),
        'descripcion': fields.text("Descripción",size=256),
        'beneficio_economico': fields.selection((
 			 ("s","Si"),
 			 ("n","No"),
 			),"Brinda beneficio económico"),
-       'beneficiario_id': fields.many2one('saim.beneficiario',"Beneficiario")
+       #'beneficiario_id': fields.many2one('saim.beneficiario',"Beneficiario")
+       'beneficiarios_id': fields.one2many('saim.beneficiario','mision_id',"Beneficiarios"),
     }
 
 saim_mision()
