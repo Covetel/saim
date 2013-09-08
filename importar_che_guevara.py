@@ -62,8 +62,8 @@ for line in source_table.readlines()[5:]:
 
         """
 
-        #try:
-        if True:
+        try:
+        #if True:
 
             l = line.split(",")
             print "Procesando: ",l
@@ -246,6 +246,6 @@ for line in source_table.readlines()[5:]:
             print "Creado: "+str(partner_id)
 
 
-        #except:
-        #    error.write("Error creando: "+str(l))
+        except:
+            error.write("Error creando: "+str(l))
 
