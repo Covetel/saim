@@ -331,7 +331,7 @@ class saim_beneficiario(osv.osv):
        'organizacion_pertenece': fields.char("A cual organización pertenece",size=128),
        #'misiones_ids': fields.one2many('aim.misiones','beneficiario_id',"Misiones en la comunidad",required=True),
        #'misiones_ids': fields.one2many('aim.misiones','beneficiario_id',"Misiones en la comunidad",required=True),
-       'mision_id': fields.many2one('saim.mision',"Mision las que pertenece"),
+       'mision_id': fields.many2one('saim.mision',"Mision la que pertenece"),
        'reg_cne': fields.selection((
             ("s","Si"),
             ("n","No"),
@@ -376,6 +376,7 @@ class saim_beneficiario(osv.osv):
            ('1','Si'),
            ),"Negocio Propio"),
        'ingresos': fields.float("Ingresos"),
+       'ayuda': fields.char("Ayuda",size=128),
 
 
 
