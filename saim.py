@@ -376,7 +376,8 @@ class saim_beneficiario(osv.osv):
            ('1','Si'),
            ),"Negocio Propio"),
        'ingresos': fields.float("Ingresos"),
-       'ayuda': fields.char("Ayuda",size=128),
+       'ayuda': fields.char("Ayuda económica percibida",size=128),
+       'caracteristica_vivienda': fields.char("Caracteristicas de la vivienda",size=256),
 
 
 
