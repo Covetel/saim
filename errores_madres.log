@@ -1,0 +1,256 @@
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Felida', 'sexo': 'DE PINEDA', 'apellidos': ' ', 'direccion_habitacion': '', 'mision_id': 6}
+ 0273-4174627,,FELIDA, ,CONTRERAS,DE PINEDA,FELIDA  ,CONTRERAS DE PINEDA,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Rosa', 'sexo': 'LUENGO', 'apellidos': 'Virginia', 'direccion_habitacion': '', 'mision_id': 6}
+0258-4330878,,ROSA,VIRGINIA,GUERRERO,LUENGO,ROSA VIRGINIA,GUERRERO LUENGO,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Marilis', 'sexo': 'ALARCON', 'apellidos': 'Yasmin', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0426-2477115,,MARILIS,YASMIN,ROJAS,ALARCON,MARILIS YASMIN,ROJAS ALARCON,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Yamileth', 'sexo': 'APONTE', 'apellidos': 'Magdalena', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0424-4980437,,YAMILETH,MAGDALENA,GARCIA,APONTE,YAMILETH MAGDALENA,GARCIA APONTE,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Ana', 'sexo': 'MALAVE', 'apellidos': 'Agrispina', 'direccion_habitacion': '', 'mision_id': 6}
+ TELF: 0426-9444305,,ANA,AGRISPINA,SILVA,MALAVE,ANA AGRISPINA,SILVA MALAVE,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Alicia', 'sexo': 'SANCHEZ', 'apellidos': 'Beatriz', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0416-9495222,,ALICIA,BEATRIZ,GONZALEZ,SANCHEZ,ALICIA BEATRIZ,GONZALEZ SANCHEZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Rosa', 'sexo': 'HERRERA', 'apellidos': 'Eugenia', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0424-4069210,,ROSA,EUGENIA,CALDERON,HERRERA,ROSA EUGENIA,CALDERON HERRERA,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Carmen', 'sexo': 'VARGAS', 'apellidos': 'Elena', 'direccion_habitacion': '', 'mision_id': 6}
+ PRINCIPAL NO CERCA DEL PUEBLO  TELÉFONO 0  0,,CARMEN,ELENA,MARQUEZ,VARGAS,CARMEN ELENA,MARQUEZ VARGAS,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-10987548', 'nombres': 'Marisol ', 'sexo': 'f', 'apellidos': 'Castro Rivas', 'direccion_habitacion': 'PARROQUIA ALTAGRACIA', 'mision_id': 6, 'estado': 13, 'parroquia': 102, 'municipio': 42}
+TELF: 0212 492 60 95
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Marisol', 'sexo': 'RIVAS', 'apellidos': '', 'direccion_habitacion': '', 'mision_id': 6}
+0416 307 30 82 / 0414 100 73 42,,MARISOL,,CASTRO,RIVAS,MARISOL ,CASTRO RIVAS,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-11977219', 'nombres': 'Petra Maria', 'sexo': 'f', 'apellidos': 'Trujillo ', 'direccion_habitacion': 'PARROQUIA SUCRE', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF 0212 425 52 14
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Evelia', 'sexo': 'PARADA', 'apellidos': 'Del Carmen', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0426-6114816,,EVELIA,DEL CARMEN,YEPEZ,PARADA,EVELIA DEL CARMEN,YEPEZ PARADA,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12051541', 'nombres': 'Ligia Mercedes', 'sexo': 'f', 'apellidos': 'Pinto ', 'direccion_habitacion': 'PARROQUIA SUCRE', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0212 925 61 40
+
+
+Problema creando:{'numero_identidad': 'V-12090220', 'nombres': 'Leidy Margarita', 'sexo': 'f', 'apellidos': 'Sequera De Salas', 'direccion_habitacion': 'PARROQUIA EL VALLE', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0212 885 33 34
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Leidy', 'sexo': 'DE SALAS', 'apellidos': 'Margarita', 'direccion_habitacion': '', 'mision_id': 6}
+0412 396 63 43,,LEIDY,MARGARITA,SEQUERA,DE SALAS,LEIDY MARGARITA,SEQUERA DE SALAS,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12091581', 'nombres': 'Maria Francisca', 'sexo': 'f', 'apellidos': 'Lopez De Castillo', 'direccion_habitacion': 'PARROQUIA CARICUAO', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0212 433 22 95
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Maria', 'sexo': 'DE CASTILLO', 'apellidos': 'Francisca', 'direccion_habitacion': '', 'mision_id': 6}
+0426 714 82 65,,MARIA,FRANCISCA,LOPEZ,DE CASTILLO,MARIA FRANCISCA,LOPEZ DE CASTILLO,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Lilian', 'sexo': 'GRANADO', 'apellidos': 'Rosa', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0212 8374792 / 0416 923 96 15,,LILIAN,ROSA,BELMONTE,GRANADO,LILIAN ROSA,BELMONTE GRANADO,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12107107', 'nombres': 'Gregoria Antonia', 'sexo': 'f', 'apellidos': 'Barrios Garcia', 'direccion_habitacion': 'PARROQUIA COCHE', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 
+
+
+Problema creando:{'numero_identidad': 'V-12107107', 'nombres': 'Gregoria Antonia', 'sexo': 'f', 'apellidos': 'Barrios Garcia', 'direccion_habitacion': 'PARROQUIA COCHE', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+0212 495 27 74
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Gregoria', 'sexo': 'GARCIA', 'apellidos': 'Antonia', 'direccion_habitacion': '', 'mision_id': 6}
+0426 706 07 40,,GREGORIA,ANTONIA,BARRIOS,GARCIA,GREGORIA ANTONIA,BARRIOS GARCIA,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Maigualida', 'sexo': 'VALLADARES', 'apellidos': '', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0416 930 62 96,,MAIGUALIDA,,MARTINEZ,VALLADARES,MAIGUALIDA ,MARTINEZ VALLADARES,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Yidrid', 'sexo': 'PRADA', 'apellidos': 'Yamilet', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0414 331 71 41,,YIDRID,YAMILET,RUGELES,PRADA,YIDRID YAMILET,RUGELES PRADA,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Daxy', 'sexo': 'MENESES', 'apellidos': 'Delmira', 'direccion_habitacion': '', 'mision_id': 6}
+TELEF: 0212 619 84 40 / 0426 904 82 04,,DAXY,DELMIRA,GONZALEZ,MENESES,DAXY DELMIRA,GONZALEZ MENESES,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12128722', 'nombres': 'Liliana Josefina', 'sexo': 'f', 'apellidos': 'Guerra Cabeza', 'direccion_habitacion': 'PARROQUIA SUCRE', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0212 637 67 69
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Liliana', 'sexo': 'CABEZA', 'apellidos': 'Josefina', 'direccion_habitacion': '', 'mision_id': 6}
+0412 882 89 64,,LILIANA,JOSEFINA,GUERRA,CABEZA,LILIANA JOSEFINA,GUERRA CABEZA,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Geovela', 'sexo': 'FERNANDEZ', 'apellidos': 'Cenit', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0414 207 28 02 / 0426 606 81 90,,GEOVELA,CENIT,TAPIA,FERNANDEZ,GEOVELA CENIT,TAPIA FERNANDEZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12156674', 'nombres': 'Rosemari Josefina', 'sexo': 'f', 'apellidos': 'Garcia ', 'direccion_habitacion': 'PARROQUIA ALTAGRACIA', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0212 860 82 10
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Carmen', 'sexo': 'VILLARREAL', 'apellidos': 'Diva', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0212 471 71 46,,CARMEN,DIVA,DUGARTE,VILLARREAL,CARMEN DIVA,DUGARTE VILLARREAL,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12159626', 'nombres': 'Isabel Virginia', 'sexo': 'f', 'apellidos': 'Fuentes ', 'direccion_habitacion': 'PARROQUIA EL PARAISO', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0212 572 05 74
+
+
+Problema creando:{'numero_identidad': 'V-12161525', 'nombres': 'Grecia Natacha', 'sexo': 'f', 'apellidos': 'Muro Rodriguez', 'direccion_habitacion': 'PARROQUIE EL JUNQUITO', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0212 638 43 97
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Grecia', 'sexo': 'RODRIGUEZ', 'apellidos': 'Natacha', 'direccion_habitacion': '', 'mision_id': 6}
+0412 938 14 13,,GRECIA,NATACHA,MURO,RODRIGUEZ,GRECIA NATACHA,MURO RODRIGUEZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Maria', 'sexo': 'RAMOS', 'apellidos': 'Del Valle', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0426 317 41 62,,MARIA,DEL VALLE,DOMINGUEZ,RAMOS,MARIA DEL VALLE,DOMINGUEZ RAMOS,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Maribel', 'sexo': 'GAMEZ', 'apellidos': '', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0212 425 76 69 / 0424 213 41 23,,MARIBEL,,ESQUIVEL,GAMEZ,MARIBEL ,ESQUIVEL GAMEZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12168761', 'nombres': 'Maria Anays', 'sexo': 'f', 'apellidos': 'Torrealba Guillen', 'direccion_habitacion': 'PARROQUIA EL JUNQUITO', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0426 976 57 72
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Maria', 'sexo': 'GUILLEN', 'apellidos': 'Anays', 'direccion_habitacion': '', 'mision_id': 6}
+0416 861 49 38,,MARIA,ANAYS,TORREALBA,GUILLEN,MARIA ANAYS,TORREALBA GUILLEN,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12184164', 'nombres': 'Monica Patricia', 'sexo': 'f', 'apellidos': 'Pertuz Pareja', 'direccion_habitacion': 'PARROQUIA EL JUNQUITO', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0212 660 85 21
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Monica', 'sexo': 'PAREJA', 'apellidos': 'Patricia', 'direccion_habitacion': '', 'mision_id': 6}
+0426 722 28 50,,MONICA,PATRICIA,PERTUZ,PAREJA,MONICA PATRICIA,PERTUZ PAREJA,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12185699', 'nombres': 'Irazu De Los Angeles', 'sexo': 'f', 'apellidos': 'Amaya Rondon', 'direccion_habitacion': 'PARROQUIA SAN AGUSTIN', 'mision_id': 6, 'estado': 13, 'parroquia': 220, 'municipio': 42}
+TELF: 0212 577 99 13
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Irazu', 'sexo': 'RONDON', 'apellidos': 'De Los Angeles', 'direccion_habitacion': '', 'mision_id': 6}
+0412 558 26 26,,IRAZU,DE LOS ANGELES,AMAYA,RONDON,IRAZU DE LOS ANGELES,AMAYA RONDON,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12189509', 'nombres': 'Yuly Del Carmen', 'sexo': 'f', 'apellidos': 'Morillo Rodriguez', 'direccion_habitacion': 'PARROQUIA SUCRE', 'mision_id': 6, 'estado': 13, 'parroquia': 875, 'municipio': 112}
+TELEF: 0212 415 34 98
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Yuly', 'sexo': 'RODRIGUEZ', 'apellidos': 'Del Carmen', 'direccion_habitacion': '', 'mision_id': 6}
+0412 637 23 48,,YULY,DEL CARMEN,MORILLO,RODRIGUEZ,YULY DEL CARMEN,MORILLO RODRIGUEZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-12831759', 'nombres': 'Ana Ysabel', 'sexo': 'f', 'apellidos': 'Gomez ', 'direccion_habitacion': 'PARROQUIA JUAN DE VILLEGAS', 'mision_id': 6, 'estado': 4, 'parroquia': 86, 'municipio': 31}
+ TELF: 0251-7171751
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Ysabel', 'sexo': 'OSORIO', 'apellidos': 'Graciela', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0251-2326686 / 0416- 5220366,,YSABEL,GRACIELA,RAMOS,OSORIO,YSABEL GRACIELA,RAMOS OSORIO,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Beatriz', 'sexo': 'PEREZ', 'apellidos': 'Del Carmen', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0251-7700623 / 0426-6563874/ 0416 -1527797,,BEATRIZ,DEL CARMEN,SANCHEZ,PEREZ,BEATRIZ DEL CARMEN,SANCHEZ PEREZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Luzmila', 'sexo': 'MARRUFO', 'apellidos': 'Josefina', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0414-5079872 / 0416-1065205,,LUZMILA,JOSEFINA,HERNANDEZ,MARRUFO,LUZMILA JOSEFINA,HERNANDEZ MARRUFO,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Celida', 'sexo': 'COLMENARES', 'apellidos': '', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0412 931 24 43,,CELIDA,,GUILLEN,COLMENARES,CELIDA ,GUILLEN COLMENARES,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-14311662', 'nombres': 'Rosa Marys', 'sexo': 'f', 'apellidos': 'Garcia Martinez', 'direccion_habitacion': 'PARROQUIA LOS TEQUES', 'mision_id': 6, 'estado': 8, 'parroquia': 289, 'municipio': 88}
+TELF: 0212 323 85 16
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Rosa', 'sexo': 'MARTINEZ', 'apellidos': 'Marys', 'direccion_habitacion': '', 'mision_id': 6}
+0424104 78 59,,ROSA,MARYS,GARCIA,MARTINEZ,ROSA MARYS,GARCIA MARTINEZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Hilda', 'sexo': 'CASTILLO', 'apellidos': 'Catalina', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0239 515 52 97 / 0416 715 49 65,,HILDA,CATALINA,DELGADO,CASTILLO,HILDA CATALINA,DELGADO CASTILLO,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Mariela', 'sexo': 'BELLO', 'apellidos': 'Del Carmen', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0212 517 34 19 / 0426 412 52 44,,MARIELA,DEL CARMEN,ESCALONA,BELLO,MARIELA DEL CARMEN,ESCALONA BELLO,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-15279863', 'nombres': 'Nancy Del Valle', 'sexo': 'f', 'apellidos': 'Barreto ', 'direccion_habitacion': 'PARROQUIA GUATIRE', 'mision_id': 6, 'estado': 8, 'parroquia': 316, 'municipio': 54}
+TELF: 0212 839 14 37
+
+
+Problema creando:{'numero_identidad': 'V-15462619', 'nombres': 'Antonia Rosalia', 'sexo': 'f', 'apellidos': 'Caro Linares', 'direccion_habitacion': 'PARROQUIA GUATIRE', 'mision_id': 6, 'estado': 8, 'parroquia': 316, 'municipio': 54}
+TELF: 0212 883 91 03
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Antonia', 'sexo': 'LINARES', 'apellidos': 'Rosalia', 'direccion_habitacion': '', 'mision_id': 6}
+0416 833 22 05,,ANTONIA,ROSALIA,CARO,LINARES,ANTONIA ROSALIA,CARO LINARES,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Liliana', 'sexo': 'TOVAR', 'apellidos': 'Del Carmen', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0292 415 01 07,,LILIANA,DEL CARMEN,MOLINARES,TOVAR,LILIANA DEL CARMEN,MOLINARES TOVAR,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Marielis', 'sexo': 'RIOS', 'apellidos': 'Carolina', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0414 992 56 70,,MARIELIS,CAROLINA,PRINCE,RIOS,MARIELIS CAROLINA,PRINCE RIOS,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Yexica', 'sexo': 'AGELVIZ', 'apellidos': 'Esther', 'direccion_habitacion': '', 'mision_id': 6}
+ 4 NINGUNA TELÉFONO 0  0,,YEXICA,ESTHER,CHAVEZ,AGELVIZ,YEXICA ESTHER,CHAVEZ AGELVIZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Maryudiz', 'sexo': 'HENRIQUEZ', 'apellidos': 'Creitonz', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0276 375 50 24 / 0426 275 04 87,,MARYUDIZ,CREITONZ,LUGO,HENRIQUEZ,MARYUDIZ CREITONZ,LUGO HENRIQUEZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-19499735', 'nombres': 'Katherine Yujanny', 'sexo': 'f', 'apellidos': 'Contreras Montilla', 'direccion_habitacion': 'PARROQUIA LA PAZ', 'mision_id': 6, 'estado': 24, 'parroquia': 1086, 'municipio': 327}
+TELF: 0271 511 25 23
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Katherine', 'sexo': 'MONTILLA', 'apellidos': 'Yujanny', 'direccion_habitacion': '', 'mision_id': 6}
+0416 135 73 99,,KATHERINE,YUJANNY,CONTRERAS,MONTILLA,KATHERINE YUJANNY,CONTRERAS MONTILLA,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-20004993', 'nombres': 'Ana Maria', 'sexo': 'f', 'apellidos': 'Sanchez Cortez', 'direccion_habitacion': 'PARROQUIA SAN LUIS', 'mision_id': 6, 'estado': 24, 'parroquia': 1075, 'municipio': 325}
+0271 221 70 21
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Ana', 'sexo': 'CORTEZ', 'apellidos': 'Maria', 'direccion_habitacion': '', 'mision_id': 6}
+0426 770 06 32,,ANA,MARIA,SANCHEZ,CORTEZ,ANA MARIA,SANCHEZ CORTEZ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V- CASA NUMERO 138', 'nombres': ' Frente A Confecciones La Elegancia. Tel\xc3\x89fono 0412 5176029', 'sexo': 'YORANIN', 'apellidos': '', 'direccion_habitacion': '', 'mision_id': 6}
+BARRIO CRISTOBAL COLON CALLE LA PINTA, CASA NUMERO 138, FRENTE A CONFECCIONES LA ELEGANCIA. TELÉFONO 0412 5176029,,GRETER,YORANIN,BELLO,,GRETER YORANIN,BELLO ,,,,,,,,,
+
+
+Problema creando:{'numero_identidad': 'V-', 'nombres': 'Erika', 'sexo': 'TOVAR', 'apellidos': 'Maria', 'direccion_habitacion': '', 'mision_id': 6}
+TELF: 0267 395 07 22,,ERIKA,MARIA,MORENO,TOVAR,ERIKA MARIA,MORENO TOVAR,,,,,,,,,
+
+

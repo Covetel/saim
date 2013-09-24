@@ -1,11 +1,10 @@
 # *-* coding=utf-8 *-* 
 import xmlrpclib
+import settings
 
-username = 'admin' #the user
-pwd = '123'      #the password of the user
-dbname = 'SAIM'    #the database
-#pwd = '123321...'      #the password of the user
-#dbname = 'SAIM'    #the database
+username = settings.username
+pwd = settings.pwd
+dbname = settings.dbname
 
 # Get the uid
 sock_common = xmlrpclib.ServerProxy ('http://localhost:8069/xmlrpc/common')

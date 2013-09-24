@@ -1,11 +1,11 @@
 # *-* coding=utf-8 *-* 
+import traceback
 import xmlrpclib
+import settings
 
-username = 'admin' #the user
-#pwd = '123'      #the password of the user
-#dbname = 'Covetel7'    #the database
-pwd = '123'      #the password of the user
-dbname = 'SAIM'    #the database
+username = settings.username
+pwd = settings.pwd 
+dbname = settings.dbname 
 
 # Get the uid
 sock_common = xmlrpclib.ServerProxy ('http://localhost:8069/xmlrpc/common')
@@ -22,7 +22,7 @@ def mayus(cadena):
 source_table = open("madres.csv")
 bandera = True 
 
-errores = open("errores_madres","a+")
+errores = open("errores_madres.log","a+")
 
 buscar = [("name","=","Madres del Barrio")]
 mision_id = sock.execute(dbname, uid, pwd, 'saim.mision', 'search', buscar)
@@ -33,7 +33,11 @@ if len(mision_id)==0:
     }
     mision_id= sock.execute(dbname, uid, pwd, 'saim.mision', 'create', mision)
 
+i = 0
+#print len(source_table.readlines())
+#exit()
 for line in source_table.readlines()[5:]:
+	print "LINEA: ",i
         """
         l[1] #Cedula
         l[2] #Nombres
@@ -95,6 +99,5 @@ for line in source_table.readlines()[5:]:
                 print "ID CREADO:",partner_id
 
         except:
-            print  "Problema creando:"+str(beneficiario)
-            errores.write("Problema creando:"+str(beneficiario))
+            errores.write("Problema creando:"+str(beneficiario)+"\n"+line+"\n\n")
 
