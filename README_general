@@ -1,3 +1,8 @@
 Para inicializar una nueva instalación del modulo SAIM, se debe ejecutar en primer lugar el script poblar_estados.py 
 
 Una vez se ha ejecutado este script, se puede proceder a ejecutar los demás scripts de carga de datos.
+
+El paquete .deb que se cree debera ejecutar 
+python poblar_estados.py
+
+en el postinst
