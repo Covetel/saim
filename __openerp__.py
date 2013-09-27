@@ -31,8 +31,8 @@
     'images': [''],
     'depends': ['base','board'],
     'data': [
-#        'vehiculos_security.xml',
-#        'ir.model.access.csv',
+        'security/saim_rules.xml',
+        'security/ir.model.access.csv',
         'saim_view.xml',
 #        'vehiculos_board.xml',
         ],
