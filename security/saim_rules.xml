@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+    	        <record id="res_group_saim_operador" model="res.groups">
+			<field name="name">[SAIM] Operador</field>
+		</record>
+		<record id="res_group_saim_consulta" model="res.groups">
+			<field name="name">[SAIM] Consulta (Solo Lectura)</field>
+		</record>
+    </data>
+</openerp>

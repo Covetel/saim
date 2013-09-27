@@ -1,0 +1,15 @@
+id,name,model_id:id,group_id:id,perm_create,perm_unlink,perm_write,perm_read
+saim_user,saim_user,model_saim_beneficiario,res_group_saim_operador,1,1,1,1
+saim_consulta,saim_consulta,model_saim_beneficiario,res_group_saim_consulta,0,0,0,1
+saim_user,saim_user,model_saim_pais,res_group_saim_operador,1,1,1,1
+saim_consulta,saim_consulta,model_saim_pais,res_group_saim_consulta,0,0,0,1
+saim_user,saim_user,model_saim_estados,res_group_saim_operador,1,1,1,1
+saim_consulta,saim_consulta,model_saim_estados,res_group_saim_consulta,0,0,0,1
+saim_user,saim_user,model_saim_familiar,res_group_saim_operador,1,1,1,1
+saim_consulta,saim_consulta,model_saim_familiar,res_group_saim_consulta,0,0,0,1
+saim_user,saim_user,model_saim_mision,res_group_saim_operador,1,1,1,1
+saim_consulta,saim_consulta,model_saim_mision,res_group_saim_consulta,0,0,0,1
+saim_user,saim_user,model_saim_municipios,res_group_saim_operador,1,1,1,1
+saim_consulta,saim_consulta,model_saim_municipios,res_group_saim_consulta,0,0,0,1
+saim_user,saim_user,model_saim_parroquias,res_group_saim_operador,1,1,1,1
+saim_consulta,saim_consulta,model_saim_parroquias,res_group_saim_consulta,0,0,0,1
