@@ -1,0 +1,12 @@
+
+HOW TO INSTALL THE SAIM MODULE:
+===============================
+
+- Copy this folder to the addons folder of your openerp instance
+- Restart the service with --update=saim
+- Install the module via web interface
+- Before using the module:
+ * Define the variables in the file settings.py according to your deployment
+ * Execute the command 'python importar_estados.py' and wait for it to finish 
+
+Now you will have the module working properly with all the geographic information that is needed.
