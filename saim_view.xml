@@ -29,6 +29,7 @@
                     <field name="apellidos" />
                     <field name="edad"/>
                     <field name="numero_identidad"/>
+                    <field name="mision_id" select="1" widget="selection"/>
                 </search>
             </field>
         </record>
