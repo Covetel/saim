@@ -19,6 +19,20 @@
 			</field>
 		</record>
 
+        <record id="view_saim_beneficiario_search" model="ir.ui.view">
+            <field name="name">view.saim.beneficiario.search</field>
+            <field name="model">saim.beneficiario</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search string="Beneficiarios">
+                    <field name="nombres" />
+                    <field name="apellidos" />
+                    <field name="edad"/>
+                    <field name="numero_identidad"/>
+                </search>
+            </field>
+        </record>
+
 		<!--Vista form de los vehiculos-->
 		<record model="ir.ui.view" id="view_saim_beneficiario_form">
 			<field name="name">view.saim.beneficiario.form</field>
